@@ -1,0 +1,35 @@
+# =============================================================================
+# Bulk Edit Definitions
+# =============================================================================
+#
+# Each entry defines a batch of edits to apply to a Monday.com board.
+#
+# Structure:
+#   - name: Human-readable label for this batch
+#     board_id: "12345678"
+#     filter:
+#       column_id: <column to filter on>
+#       value: <value to match> (string match against cell text)
+#     changes:
+#       - column_id: <column to update>
+#         value: <new value — format depends on column type>
+#
+# Column value formats (Monday.com GraphQL):
+#   status:  "Label Text"
+#   text:    "plain string"
+#   date:    { "date": "2026-01-15" }
+#   email:   { "email": "a@b.com", "text": "a@b.com" }
+#   phone:   { "phone": "+1234567890", "countryShortName": "US" }
+#
+# =============================================================================
+
+edits: []
+  # Example:
+  # - name: Mark old consultations as archived
+  #   board_id: "9283837796"
+  #   filter:
+  #     column_id: status
+  #     value: "Done"
+  #   changes:
+  #     - column_id: color_mm087zk8
+  #       value: "Archived"

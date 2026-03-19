@@ -1,0 +1,16 @@
+{
+  "name": "monday-bulk-ops",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "plan": "bun src/plan.ts",
+    "execute": "bun src/execute.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
